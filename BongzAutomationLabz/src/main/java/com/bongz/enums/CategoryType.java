@@ -9,5 +9,10 @@ package com.bongz.enums;
  * @version 1.0
  */
 public enum CategoryType {
+	
+	REGRESSION,
+	SMOKE,
+	SANITY,
+	MINIREGRESSION;
 
 }

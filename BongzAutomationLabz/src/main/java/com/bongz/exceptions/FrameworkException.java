@@ -8,6 +8,15 @@ package com.bongz.exceptions;
  * @author Bongz
  * @version 1.0
  */
-public class FrameworkException {
+@SuppressWarnings("serial")
+public class FrameworkException extends RuntimeException{
+	
+	public FrameworkException(String message) {
+		super(message);
+	}
+	
+	public FrameworkException(String message,Throwable cause) {
+		super(message,cause);
+	}
 
 }

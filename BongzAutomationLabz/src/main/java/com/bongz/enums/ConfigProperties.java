@@ -9,5 +9,13 @@ package com.bongz.enums;
  * @version 1.0
  */
 public enum ConfigProperties {
+	
+	URL,
+	OVERRIDEREPORTS,
+	PASSEDSTEPSSCREENSHOTS,
+	FAILEDSTEPSSCREENSHOTS,
+	SKIPPEDSTEPSSCREENSHOTS,
+	RETRYFAILEDTESTS,
+	BROWSER;
 
 }
