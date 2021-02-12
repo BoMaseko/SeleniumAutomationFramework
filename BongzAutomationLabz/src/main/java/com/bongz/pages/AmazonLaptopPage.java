@@ -8,6 +8,10 @@ package com.bongz.pages;
  * @author Bongz
  * @version 1.0
  */
-public class AmazonLaptopPage {
+public final class AmazonLaptopPage extends BasePage{
+	
+	public String getTitle() {
+		return getPageTitle();
+	}
 
 }

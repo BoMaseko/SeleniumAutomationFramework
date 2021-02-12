@@ -17,6 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.bongz.constants.FrameworkConstants;
 import com.bongz.exceptions.FrameworkException;
 import com.bongz.exceptions.InvalidPathForExcelException;
+import com.bongz.exceptions.InvalidPathForFilesException;
 
 /**
  * 11 Feb 2021
@@ -52,7 +53,7 @@ public class ExcelUtils {
 			}
 
 		} catch (FileNotFoundException e) {
-			throw new InvalidPathForExcelException("Excel File you trying to read is not found");
+			throw new InvalidPathForFilesException("Excel File you trying to read is not found");
 		} catch (IOException e) {
 			throw new FrameworkException("Some io exception happened  while reading excel file");
 		}
