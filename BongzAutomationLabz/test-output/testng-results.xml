@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="28024" started-at="2021-02-12T06:47:21Z" finished-at="2021-02-12T06:47:49Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="28024" started-at="2021-02-12T06:47:21Z" finished-at="2021-02-12T06:47:49Z">
+      <class name="com.bongz.tests.OrangeHRMTests">
+        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="setUp" is-config="true" duration-ms="15931" started-at="2021-02-12T06:47:22Z" finished-at="2021-02-12T06:47:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5a2d131d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginLogoutTest(java.util.Map)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="loginLogoutTest" duration-ms="9819" started-at="2021-02-12T06:47:38Z" description="To check" finished-at="2021-02-12T06:47:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=admin123, testname=loginLogoutTest, execute=yes, browser=chrome, username=Admin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLogoutTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="tearDown" is-config="true" duration-ms="1364" started-at="2021-02-12T06:47:48Z" finished-at="2021-02-12T06:47:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.bongz.tests.OrangeHRMTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

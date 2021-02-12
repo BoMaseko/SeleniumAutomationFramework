@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" data-provider-thread-count="3">
+  <listeners>
+    <listener class-name="com.bongz.listeners.ListenerClass"/>
+    <listener class-name="com.bongz.listeners.MethodInterceptor"/>
+    <listener class-name="com.bongz.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="com.bongz.tests.OrangeHRMTests">
+        <methods>
+          <include name="loginLogoutTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.bongz.tests.OrangeHRMTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
