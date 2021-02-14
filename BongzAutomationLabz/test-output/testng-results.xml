@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="28024" started-at="2021-02-12T06:47:21Z" finished-at="2021-02-12T06:47:49Z">
+  <suite name="Suite" duration-ms="30621" started-at="2021-02-12T12:19:46Z" finished-at="2021-02-12T12:20:16Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="28024" started-at="2021-02-12T06:47:21Z" finished-at="2021-02-12T06:47:49Z">
+    <test name="Test" duration-ms="30621" started-at="2021-02-12T12:19:46Z" finished-at="2021-02-12T12:20:16Z">
       <class name="com.bongz.tests.OrangeHRMTests">
-        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="setUp" is-config="true" duration-ms="15931" started-at="2021-02-12T06:47:22Z" finished-at="2021-02-12T06:47:38Z">
+        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="setUp" is-config="true" duration-ms="20249" started-at="2021-02-12T12:19:46Z" finished-at="2021-02-12T12:20:07Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginLogoutTest(java.util.Map)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="loginLogoutTest" duration-ms="9819" started-at="2021-02-12T06:47:38Z" description="To check" finished-at="2021-02-12T06:47:48Z">
+        <test-method status="PASS" signature="loginLogoutTest(java.util.Map)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="loginLogoutTest" duration-ms="8396" started-at="2021-02-12T12:20:07Z" description="To check" finished-at="2021-02-12T12:20:15Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginLogoutTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="tearDown" is-config="true" duration-ms="1364" started-at="2021-02-12T06:47:48Z" finished-at="2021-02-12T06:47:49Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="tearDown" is-config="true" duration-ms="1272" started-at="2021-02-12T12:20:15Z" finished-at="2021-02-12T12:20:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

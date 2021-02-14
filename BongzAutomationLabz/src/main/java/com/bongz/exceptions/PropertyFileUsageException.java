@@ -1,12 +1,14 @@
-/**
- * 
- */
+
 package com.bongz.exceptions;
 
 /**
+ * Runtime Exception occurs when the key or value fetched from the property file is null
+ * 
  * 11 Feb 2021
  * @author Bongz
  * @version 1.0
+ * @see com.bongz.constants.FrameworkConstants
+ * @see com.bongz.utils.PropertyUtils
  */
 @SuppressWarnings("serial")
 public class PropertyFileUsageException extends FrameworkException{

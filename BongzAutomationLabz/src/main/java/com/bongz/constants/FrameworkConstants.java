@@ -3,6 +3,15 @@ package com.bongz.constants;
 import com.bongz.enums.ConfigProperties;
 import com.bongz.utils.PropertyUtils;
 
+
+/**
+ * Framework Constants holds all the constant values used within the framework. If some value needs to be changed
+ * or modified often, then it should be stored in the property files
+ * 
+ * 14 Feb 2021
+ * @author Bongz
+ * @version 1.0
+ */
 public class FrameworkConstants {
 	
 	/**
@@ -23,6 +32,12 @@ public class FrameworkConstants {
 	private static final String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir")+"/extent-test-output/";
 	private static String extentReportFilePath = "";
 	
+	
+	/**
+	 * 
+	 * @author Bongz
+	 * @return Extent Report path where the index.html file will be generated.
+	 */
 	public static String getExtentReportFilePath()  {
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath = createReportPath();
@@ -30,6 +45,13 @@ public class FrameworkConstants {
 		return extentReportFilePath;
 	}
 	
+	
+	/**
+	 * 
+	 * @author Bongz
+	 * @return If Override reports value in the 
+	 * property file is no,then the timestamp will be appended
+	 */
 	private static String createReportPath()  {
 		if(PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")) {
 			return EXTENTREPORTFOLDERPATH+System.currentTimeMillis()+"/index.html";
@@ -38,6 +60,7 @@ public class FrameworkConstants {
 			return EXTENTREPORTFOLDERPATH+"/index.html";
 		}
 	}
+	
 	
 	public static String getGeckoDriverPath() {
 		return GECKODRIVERPATH;

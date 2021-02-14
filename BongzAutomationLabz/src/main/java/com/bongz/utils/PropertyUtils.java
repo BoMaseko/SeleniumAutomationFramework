@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.bongz.utils;
 
 import java.io.FileInputStream;
@@ -15,6 +13,9 @@ import com.bongz.enums.ConfigProperties;
 import com.bongz.exceptions.PropertyFileUsageException;
 
 /**
+ * Read the property file and store it in a HashMap for faster processing.
+ * Users can prefer to use json instead of property file based on their requirement.
+ * 
  * 11 Feb 2021
  * @author Bongz
  * @version 1.0
@@ -41,6 +42,14 @@ public final class PropertyUtils {
 		} 
 	}
 	
+	/**
+	 * Receives the {@link com.bongz.enums.ConfigProperties},converts to lowercase , return the corresponding value
+	 * for the key from the HashMap
+	 * 
+	 * @author Bongz
+	 * @param key To be fetched from property file
+	 * @return corresponding value for the requested key if found else {@link PropertyFileUsageException}
+	 */
 	public static String get(ConfigProperties key)  {
 		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
 			throw new PropertyFileUsageException("Property name " + key + " is not found. Please check config.properties");

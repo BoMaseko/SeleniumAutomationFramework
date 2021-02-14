@@ -1,12 +1,13 @@
-/**
- * 
- */
+
 package com.bongz.exceptions;
 
 /**
+ * Runtime Exception occurs when the path given for excel sheet is incorrect.
+ * 
  * 11 Feb 2021
  * @author Bongz
  * @version 1.0
+ * @see com.bongz.constants.FrameworkConstants
  */
 @SuppressWarnings("serial")
 public class InvalidPathForExcelException extends InvalidPathForFilesException{

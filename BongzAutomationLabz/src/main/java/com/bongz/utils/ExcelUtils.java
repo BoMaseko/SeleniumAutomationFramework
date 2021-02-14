@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.bongz.utils;
 
 import java.io.FileInputStream;
@@ -20,14 +18,31 @@ import com.bongz.exceptions.InvalidPathForExcelException;
 import com.bongz.exceptions.InvalidPathForFilesException;
 
 /**
+ * Utility class to read or write to excel.
+ * 
  * 11 Feb 2021
  * @author Bongz
  * @version 1.0
+ * 
+ * @see com.bingz.listeners.MethodInterceptor
+ * @see DataProviderUtils
  */
 public class ExcelUtils {
 	
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private ExcelUtils() {}
 
+	/**
+	 * Encapsulates all the value from the mentioned excel sheet and store it in
+	 * List holding HashMaps. Key for the map in the column header in the excel sheet.
+	 * 
+	 * @author Bongz
+	 * @param sheetname Excel sheetname to read the value from
+	 * @return List where each index holds a map and Each map holds the details about the test
+	 * TODO create reusable methods
+	 */
 	public static List<Map<String,String>> getTestDetails(String sheetname){
 		List<Map<String,String>> list = null;
 
