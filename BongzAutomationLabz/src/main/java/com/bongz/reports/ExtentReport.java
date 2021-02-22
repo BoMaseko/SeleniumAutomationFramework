@@ -45,8 +45,8 @@ public final class ExtentReport {
 			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath()); 
 			extent.attachReporter(spark);
 			spark.config().setTheme(Theme.STANDARD);
-			spark.config().setDocumentTitle("TMB Report");
-			spark.config().setReportName("Youtube Training");
+			spark.config().setDocumentTitle("Bongz Automation Report");
+			spark.config().setReportName("Bongz Automation Labz");
 		}
 	}
 	

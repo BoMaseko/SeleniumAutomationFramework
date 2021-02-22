@@ -25,7 +25,7 @@ public final class AmazonDemoTest extends BaseTest{
 	private AmazonDemoTest() {}
 	
 	@Test
-	@FrameworkAnnotation(author= {"Amuthan","Bongz"}, 
+	@FrameworkAnnotation(author= {"Bongz"}, 
 	category = {CategoryType.REGRESSION,CategoryType.MINIREGRESSION})
 	public void amazonTest(Map<String,String> data) {
 		

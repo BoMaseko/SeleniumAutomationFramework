@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
-      <class name="com.bongz.tests.OrangeHRMTests">
+      <class name="com.bongz.tests.MultiplyTests">
         <methods>
-          <include name="loginLogoutTest" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="multiplyLoginLogoutTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.bongz.tests.OrangeHRMTests -->
+      </class> <!-- com.bongz.tests.MultiplyTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

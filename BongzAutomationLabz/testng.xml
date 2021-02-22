@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" data-provider-thread-count="3" >
- <listeners>
-    <listener class-name="com.bongz.listeners.ListenerClass" />
-    <listener class-name="com.bongz.listeners.MethodInterceptor" />
-    <listener class-name="com.bongz.listeners.AnnotationTransformer" />
-  </listeners>
+<suite name="Suite" data-provider-thread-count="3">
+	<listeners>
+		<listener class-name="com.bongz.listeners.ListenerClass" />
+		<listener class-name="com.bongz.listeners.MethodInterceptor" />
+		<listener
+			class-name="com.bongz.listeners.AnnotationTransformer" />
+	</listeners>
 
-  <test thread-count="1" name="Test" parallel="methods">
-    <classes>
-      <class name="com.bongz.tests.OrangeHRMTests"/>
-       <class name="com.bongz.tests.AmazonDemoTest"/>
-    </classes>
-  </test> <!-- Test -->
+	<test thread-count="1" name="Test" parallel="methods">
+		<classes>
+			<class name="com.bongz.tests.OrangeHRMTests" />
+			<class name="com.bongz.tests.AmazonDemoTest" />
+			<class name="com.bongz.tests.MultiplyTests" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

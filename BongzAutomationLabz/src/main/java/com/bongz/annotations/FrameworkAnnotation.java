@@ -20,7 +20,7 @@ import com.bongz.enums.CategoryType;
  * @author Bongz
  * @version 1.0
  * 
- * @see com.bongz.tests.AmazonDemoTest
+ * @see com.bongz.tests.MultiplyTests
  * @see com.bongz.enums.CategoryType
  * 
  */

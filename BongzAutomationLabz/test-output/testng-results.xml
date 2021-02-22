@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="30621" started-at="2021-02-12T12:19:46Z" finished-at="2021-02-12T12:20:16Z">
+  <suite name="Suite" duration-ms="33122" started-at="2021-02-22T15:12:01Z" finished-at="2021-02-22T15:12:34Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="30621" started-at="2021-02-12T12:19:46Z" finished-at="2021-02-12T12:20:16Z">
-      <class name="com.bongz.tests.OrangeHRMTests">
-        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="setUp" is-config="true" duration-ms="20249" started-at="2021-02-12T12:19:46Z" finished-at="2021-02-12T12:20:07Z">
+    <test name="Test" duration-ms="33122" started-at="2021-02-22T15:12:01Z" finished-at="2021-02-22T15:12:34Z">
+      <class name="com.bongz.tests.MultiplyTests">
+        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="setUp" is-config="true" duration-ms="24599" started-at="2021-02-22T15:12:02Z" finished-at="2021-02-22T15:12:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@5a2d131d]]>
+                <![CDATA[[Ljava.lang.Object;@14fc1f0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginLogoutTest(java.util.Map)[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="loginLogoutTest" duration-ms="8396" started-at="2021-02-12T12:20:07Z" description="To check" finished-at="2021-02-12T12:20:15Z">
+        <test-method status="PASS" signature="multiplyLoginLogoutTest(java.util.Map)[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="multiplyLoginLogoutTest" duration-ms="5549" started-at="2021-02-22T15:12:27Z" description="Blah blah" finished-at="2021-02-22T15:12:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=admin123, testname=loginLogoutTest, execute=yes, browser=chrome, username=Admin}]]>
+                <![CDATA[{password=@KBTokzan4078, testname=multiplyLoginLogoutTest, execute=yes, browser=chrome, username=bomaseko1}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginLogoutTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.OrangeHRMTests@42dafa95]" name="tearDown" is-config="true" duration-ms="1272" started-at="2021-02-12T12:20:15Z" finished-at="2021-02-12T12:20:16Z">
+        </test-method> <!-- multiplyLoginLogoutTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="tearDown" is-config="true" duration-ms="1771" started-at="2021-02-22T15:12:32Z" finished-at="2021-02-22T15:12:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.bongz.tests.OrangeHRMTests -->
+      </class> <!-- com.bongz.tests.MultiplyTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

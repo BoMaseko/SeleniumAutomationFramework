@@ -25,7 +25,7 @@ public final class OrangeHRMTests extends BaseTest{
 	private OrangeHRMTests() {}
 	
 	@Test
-	@FrameworkAnnotation(author= {"Amuthan","Bongz"}, 
+	@FrameworkAnnotation(author= {"Bongz"}, 
 	category = {CategoryType.REGRESSION})
 	public void loginLogoutTest(Map<String,String> data) {
 		
