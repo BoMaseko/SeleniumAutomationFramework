@@ -19,10 +19,15 @@ SOFTWARE.
  */
 package com.bongz.driver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Objects;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.bongz.enums.ConfigProperties;
 import com.bongz.utils.PropertyUtils;
@@ -45,12 +50,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  * @see com.bongz.tests.BaseTest
  */
 public final class Driver {
-	
+
 	/**
 	 * Private constructor to avoid external instantiation
 	 */
 	private Driver() {}
-	
+
 	/**
 	 * Gets the browser value and initialise the browser based on that
 	 * 
@@ -58,19 +63,44 @@ public final class Driver {
 	 * @param browser Value will be passed from {@link com.bongz.tests.BaseTest}. Values can be chrome and firefox
 	 */
 	public static void initDriver(String browser)  {
+
+		String runmode = PropertyUtils.get(ConfigProperties.RUNMODE);
+
 		if(Objects.isNull(DriverManager.getDriver())) {
 			if(browser.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
-				DriverManager.setDriver(new ChromeDriver());
+				if (runmode.equalsIgnoreCase("remote")) {
+					DesiredCapabilities cap = new DesiredCapabilities();
+					cap.setBrowserName(BrowserType.CHROME);
+
+					try {
+						DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+					} catch (MalformedURLException e) {
+						e.printStackTrace();
+					}
+				}else {				
+					DriverManager.setDriver(new ChromeDriver());
+				}
 			}
 			else if(browser.equalsIgnoreCase("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
-				DriverManager.setDriver(new FirefoxDriver());
+				if (runmode.equalsIgnoreCase("remote")) {
+					DesiredCapabilities cap = new DesiredCapabilities();
+					cap.setBrowserName(BrowserType.FIREFOX);
+
+					try {
+						DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+					} catch (MalformedURLException e) {
+						e.printStackTrace();
+					}
+				}else {
+					DriverManager.setDriver(new FirefoxDriver());
+				}
 			}
 			DriverManager.getDriver().get(PropertyUtils.get(ConfigProperties.URL));
 		}
 	}
-	
+
 	/**
 	 * Terminates the browser instance.
 	 * Sets the threadlocal to default value, i.e null.

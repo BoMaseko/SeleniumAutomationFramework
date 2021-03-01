@@ -32,6 +32,13 @@ public final class MultiplyTests extends BaseTest{
 		new MultiplyHomePage().clickRewards().getTitle();
 	}
 	
+	@Test
+	@FrameworkAnnotation(author= {"Bongz"}, 
+	category = {CategoryType.REGRESSION})
+	public void multiplyOptionsTest(Map<String,String> data) {
+		new MultiplyHomePage().clickOptions().clickPremier().getTitle();
+	}
+	
 	
 
 }
