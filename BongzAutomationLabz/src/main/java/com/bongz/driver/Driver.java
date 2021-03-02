@@ -20,19 +20,12 @@ SOFTWARE.
 package com.bongz.driver;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Objects;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import com.bongz.enums.ConfigProperties;
+import com.bongz.exceptions.BrowserInvocationException;
+import com.bongz.factories.DriverFactory;
 import com.bongz.utils.PropertyUtils;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Driver class is responsible for invoking and closing the browsers.
@@ -64,38 +57,14 @@ public final class Driver {
 	 */
 	public static void initDriver(String browser)  {
 
-		String runmode = PropertyUtils.get(ConfigProperties.RUNMODE);
+		
 
 		if(Objects.isNull(DriverManager.getDriver())) {
-			if(browser.equalsIgnoreCase("chrome")) {
-				WebDriverManager.chromedriver().setup();
-				if (runmode.equalsIgnoreCase("remote")) {
-					DesiredCapabilities cap = new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.CHROME);
 
-					try {
-						DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
-					} catch (MalformedURLException e) {
-						e.printStackTrace();
-					}
-				}else {				
-					DriverManager.setDriver(new ChromeDriver());
-				}
-			}
-			else if(browser.equalsIgnoreCase("firefox")) {
-				WebDriverManager.firefoxdriver().setup();
-				if (runmode.equalsIgnoreCase("remote")) {
-					DesiredCapabilities cap = new DesiredCapabilities();
-					cap.setBrowserName(BrowserType.FIREFOX);
-
-					try {
-						DriverManager.setDriver(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
-					} catch (MalformedURLException e) {
-						e.printStackTrace();
-					}
-				}else {
-					DriverManager.setDriver(new FirefoxDriver());
-				}
+			try {
+				DriverManager.setDriver(DriverFactory.getDriver(browser));
+			} catch (MalformedURLException e) {
+				throw new BrowserInvocationException("Please check browser capabilities");
 			}
 			DriverManager.getDriver().get(PropertyUtils.get(ConfigProperties.URL));
 		}
