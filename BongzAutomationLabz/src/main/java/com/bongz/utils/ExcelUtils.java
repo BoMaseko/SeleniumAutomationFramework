@@ -24,7 +24,7 @@ import com.bongz.exceptions.InvalidPathForFilesException;
  * @author Bongz
  * @version 1.0
  * 
- * @see com.bingz.listeners.MethodInterceptor
+ * @see com.bongz.listeners.MethodInterceptor
  * @see DataProviderUtils
  */
 public class ExcelUtils {

@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="26128" started-at="2021-02-24T08:58:03Z" finished-at="2021-02-24T08:58:29Z">
+  <suite name="Suite" duration-ms="140489" started-at="2021-03-02T13:38:38Z" finished-at="2021-03-02T13:40:59Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="26128" started-at="2021-02-24T08:58:03Z" finished-at="2021-02-24T08:58:29Z">
+    <test name="Test" duration-ms="140489" started-at="2021-03-02T13:38:38Z" finished-at="2021-03-02T13:40:59Z">
       <class name="com.bongz.tests.MultiplyTests">
-        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="setUp" is-config="true" duration-ms="17091" started-at="2021-02-24T08:58:04Z" finished-at="2021-02-24T08:58:21Z">
+        <test-method status="PASS" signature="setUp([Ljava.lang.Object;)[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="setUp" is-config="true" duration-ms="54616" started-at="2021-03-02T13:38:39Z" finished-at="2021-03-02T13:39:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4ae9cfc1]]>
+                <![CDATA[[Ljava.lang.Object;@632ceb35]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="multiplyOptionsTest(java.util.Map)[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="multiplyOptionsTest" duration-ms="6689" started-at="2021-02-24T08:58:21Z" description="To check multiply options test" finished-at="2021-02-24T08:58:28Z">
+        <test-method status="PASS" signature="multiplyOptionsTest(java.util.Map)[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="multiplyOptionsTest" duration-ms="84723" started-at="2021-03-02T13:39:34Z" description="To check multiply options test" finished-at="2021-03-02T13:40:59Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- multiplyOptionsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="tearDown" is-config="true" duration-ms="1428" started-at="2021-02-24T08:58:28Z" finished-at="2021-02-24T08:58:29Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bongz.tests.MultiplyTests@59ec2012]" name="tearDown" is-config="true" duration-ms="107" started-at="2021-03-02T13:40:59Z" finished-at="2021-03-02T13:40:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
