@@ -55,14 +55,14 @@ public final class Driver {
 	 * @author Bongz
 	 * @param browser Value will be passed from {@link com.bongz.tests.BaseTest}. Values can be chrome and firefox
 	 */
-	public static void initDriver(String browser)  {
+	public static void initDriver(String browser, String version)  {
 
 		
 
 		if(Objects.isNull(DriverManager.getDriver())) {
 
 			try {
-				DriverManager.setDriver(DriverFactory.getDriver(browser));
+				DriverManager.setDriver(DriverFactory.getDriver(browser, version));
 			} catch (MalformedURLException e) {
 				throw new BrowserInvocationException("Please check browser capabilities");
 			}
