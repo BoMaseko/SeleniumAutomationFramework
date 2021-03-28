@@ -8,6 +8,7 @@ import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -38,9 +39,11 @@ public final class DriverFactory {
 
 			if (runmode.equalsIgnoreCase("remote")) {
 				DesiredCapabilities cap = new DesiredCapabilities();
+				ChromeOptions chromeOptions = new ChromeOptions();
+				cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 				cap.setBrowserName(BrowserType.CHROME);
 				cap.setVersion(version);
-				driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), cap);
+				driver = new RemoteWebDriver(new URL(PropertyUtils.get(ConfigProperties.SELENIUMGRIDURL)), cap);
 
 			}else {	
 				WebDriverManager.chromedriver().setup();
@@ -53,7 +56,7 @@ public final class DriverFactory {
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.FIREFOX);
 				cap.setVersion(version);
-				driver = new RemoteWebDriver(new URL("http://192.168.99.100:4445/wd/hub"), cap);
+				driver = new RemoteWebDriver(new URL(PropertyUtils.get(ConfigProperties.SELENIUMGRIDURL)), cap);
 			}else {
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();

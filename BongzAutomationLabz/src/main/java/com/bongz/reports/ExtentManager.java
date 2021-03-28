@@ -1,6 +1,8 @@
 
 package com.bongz.reports;
 
+import java.util.Objects;
+
 import com.aventstack.extentreports.ExtentTest;
 
 /**
@@ -38,7 +40,10 @@ public class ExtentManager {
 	 * TODO Disallow null assignment and call unload method instead.
 	 */
 	static void setExtentTest(ExtentTest test) {
-		extTest.set(test);
+		if(Objects.nonNull(test)) {
+			extTest.set(test);
+		}
+		
 	}
 	
 	/**

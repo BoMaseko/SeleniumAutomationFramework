@@ -12,7 +12,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="multiplyLoginLogoutTest" invocation-numbers="0"/>
+          <include name="multiplyOptionsTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.bongz.tests.MultiplyTests -->
     </classes>

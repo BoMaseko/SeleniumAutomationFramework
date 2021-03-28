@@ -22,6 +22,10 @@ package com.bongz.driver;
 import java.net.MalformedURLException;
 import java.util.Objects;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import com.bongz.enums.ConfigProperties;
 import com.bongz.exceptions.BrowserInvocationException;
 import com.bongz.factories.DriverFactory;

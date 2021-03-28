@@ -1,6 +1,8 @@
 
 package com.bongz.driver;
 
+import java.util.Objects;
+
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -40,7 +42,10 @@ public final class DriverManager {
 	 * default
 	 */
 	public static void setDriver(WebDriver driverref) {
-		dr.set(driverref);
+		if(Objects.nonNull(driverref)) {
+			dr.set(driverref);
+		}
+		
 	}
 	
 	/**
